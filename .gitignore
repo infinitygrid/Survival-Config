@@ -1,0 +1,16 @@
+/cache
+/logs
+/plugins
+/worlds
+.console_history
+banned-ips.json
+banned-players.json
+commands.yml
+eula.txt
+help.yml
+ops.json
+permissions.yml
+purpur-1.17.jar
+usercache.json
+version_history.json
+whitelist.json
