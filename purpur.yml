@@ -11,9 +11,9 @@
 verbose: false
 config-version: 17
 settings:
-  dont-send-useless-entity-packets: false
+  dont-send-useless-entity-packets: true
   disable-give-dropping: false
-  use-alternate-keepalive: false
+  use-alternate-keepalive: true
   allow-water-placement-in-the-end: true
   tps-catchup: true
   server-mod-name: Purpur
@@ -536,7 +536,7 @@ world-settings:
       villager:
         ridable: false
         ridable-in-water: false
-        brain-ticks: 1
+        brain-ticks: 2
         use-brain-ticks-only-when-lagging: true
         follow-emerald-blocks: false
         can-be-leashed: false
@@ -597,7 +597,7 @@ world-settings:
       zombie:
         ridable: false
         ridable-in-water: false
-        aggressive-towards-villager-when-lagging: true
+        aggressive-towards-villager-when-lagging: false
         break-door-minimum-difficulty: HARD
         bypass-mob-griefing: false
         attributes:

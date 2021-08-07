@@ -63,7 +63,7 @@ players:
 world-settings:
   default:
     verbose: false
-    view-distance: default
+    view-distance: 4
     item-despawn-rate: 6000
     end-portal-sound-radius: 0
     enable-zombie-pigmen-portal-spawns: true
@@ -95,8 +95,8 @@ world-settings:
     max-tnt-per-tick: 100
     max-entity-collisions: 8
     merge-radius:
-      item: 2.5
-      exp: 3.0
+      item: 3.5
+      exp: 4.0
     entity-tracking-range:
       players: 48
       animals: 48
