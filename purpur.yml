@@ -9,7 +9,7 @@
 # Wiki: https://github.com/pl3xgaming/Purpur/wiki 
 
 verbose: false
-config-version: 17
+config-version: 18
 settings:
   dont-send-useless-entity-packets: true
   disable-give-dropping: false
@@ -122,8 +122,7 @@ settings:
       buried_treasure: -1
       mineshaft: -1
       stronghold: -1
-  timings:
-    url: https://timings.pl3x.net
+  timings: {}
   command:
     hide-hidden-players-from-entity-selector: false
     gamemode:
@@ -138,6 +137,26 @@ settings:
       minutes: '%02d minutes, and '
       second: '%02d second'
       seconds: '%02d seconds'
+    tpsbar:
+      title: <gray>TPS<yellow>:</yellow> <tps> MSPT<yellow>:</yellow> <mspt> Ping<yellow>:</yellow>
+        <ping>ms
+      overlay: NOTCHED_20
+      fill-mode: MSPT
+      tick-interval: 20
+      progress-color:
+        good: GREEN
+        medium: YELLOW
+        low: RED
+      text-color:
+        good: <gradient:#55ff55:#00aa00><text></gradient>
+        medium: <gradient:#ffff55:#ffaa00><text></gradient>
+        low: <gradient:#ff5555:#aa0000><text></gradient>
+    compass:
+      title: 'S  ·  ◈  ·  ◈  ·  ◈  ·  SW  ·  ◈  ·  ◈  ·  ◈  ·  W  ·  ◈  ·  ◈  ·  ◈  ·  NW  ·  ◈  ·  ◈  ·  ◈  ·  N  ·  ◈  ·  ◈  ·  ◈  ·  NE  ·  ◈  ·  ◈  ·  ◈  ·  E  ·  ◈  ·  ◈  ·  ◈  ·  SE  ·  ◈  ·  ◈  ·  ◈  ·  S  ·  ◈  ·  ◈  ·  ◈  ·  SW  ·  ◈  ·  ◈  ·  ◈  ·  W  ·  ◈  ·  ◈  ·  ◈  ·  NW  ·  ◈  ·  ◈  ·  ◈  ·  N  ·  ◈  ·  ◈  ·  ◈  ·  NE  ·  ◈  ·  ◈  ·  ◈  ·  E  ·  ◈  ·  ◈  ·  ◈  ·  SE  ·  ◈  ·  ◈  ·  ◈  ·  '
+      overlay: PROGRESS
+      progress-color: BLUE
+      percent: 1.0
+      tick-interval: 5
   entity:
     enderman:
       short-height: false
@@ -285,6 +304,7 @@ world-settings:
         attributes:
           max_health: 10.0
       enderman:
+        ignore-projectiles: false
         ridable: false
         ridable-in-water: false
         allow-griefing: true
@@ -343,6 +363,7 @@ world-settings:
         attributes:
           max_health: 30.0
       horse:
+        stand-with-rider: true
         ridable-in-water: false
         breeding-delay-ticks: 6000
         attributes:
@@ -647,6 +668,7 @@ world-settings:
             min: 1
             max: -1
       wither:
+        play-spawn-sound: true
         ridable: false
         ridable-in-water: false
         ridable-max-y: 256.0
@@ -730,6 +752,9 @@ world-settings:
           only-babies: true
           chance: 0.05
           try-existing-chickens: true
+        curing_time:
+          min: 3600
+          max: 6000
       zombified_piglin:
         ridable: false
         ridable-in-water: false
@@ -802,6 +827,7 @@ world-settings:
         ticks-per-damage: 20
         damage-from-drowning: 2.0
       elytra:
+        kinetic-damage: true
         damage-per-second: 1
         damage-multiplied-by-speed: 0.0
         ignore-unbreaking: false
@@ -826,7 +852,10 @@ world-settings:
           eat-glow-duration: 0
         shulker_box:
           drop-contents-when-destroyed: true
+        compass:
+          holding-shows-bossbar: false
       player:
+        ridable-in-water: false
         spawn-invulnerable-ticks: 60
         invulnerable-while-accepting-resource-pack: false
         should-cram-to-death: true
@@ -1171,6 +1200,7 @@ world-settings:
         allow-colors: false
         right-click-edit: false
       sponge:
+        absorbs-lava: false
         absorption:
           area: 64
           radius: 6
@@ -1194,6 +1224,17 @@ world-settings:
         explosion-power: 5.0
         explosion-fire: true
         explosion-effect: DESTROY
+      observer:
+        disable-clock: false
+      budding_amethyst:
+        silk-touch: false
+      cactus:
+        breaks-from-solid-neighbors: true
+      big_dripleaf:
+        tilt-delay:
+          UNSTABLE: 10
+          PARTIAL: 10
+          FULL: 100
     ridable-settings:
       babies-are-ridable: true
       untamed-tamables-are-ridable: true
@@ -1202,3 +1243,5 @@ world-settings:
       starvation-damage: 1.0
     seed:
       random-populator-seed: false
+timings:
+  url: https://timings.pl3x.net

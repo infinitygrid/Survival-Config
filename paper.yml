@@ -12,7 +12,7 @@
 
 verbose: false
 use-display-name-in-quit-message: false
-config-version: 20
+config-version: 21
 messages:
   no-permission: '&cI''m sorry, but you do not have permission to perform this command.
     Please contact the server administrators if you believe that this is in error.'
@@ -22,6 +22,7 @@ messages:
     flying-player: Flying is not enabled on this server
     flying-vehicle: Flying is not enabled on this server
 settings:
+  log-named-entity-deaths: true
   track-plugin-scoreboards: false
   load-permissions-yml-before-plugins: true
   fix-entity-position-desync: true
@@ -79,6 +80,7 @@ settings:
   console:
     enable-brigadier-highlighting: true
     enable-brigadier-completions: true
+  use-display-name-in-quit-message: false
 timings:
   enabled: true
   verbose: true
@@ -92,8 +94,11 @@ timings:
   history-interval: 300
   history-length: 3600
   server-name: Unknown Server
+  url: https://timings.pl3x.net
 world-settings:
   default:
+    allow-player-cramming-damage: false
+    show-sign-click-command-failure-msgs-to-player: false
     delay-chunk-unloads-by: 10s
     disable-teleportation-suffocation-check: false
     only-players-collide: false
@@ -119,7 +124,6 @@ world-settings:
     fixed-chunk-inhabited-time: -1
     experience-merge-max-value: -1
     piglins-guard-chests: true
-# This may cause big lag
     per-player-mob-spawns: true
     optimize-explosions: true
     should-remove-dragon: false
@@ -227,8 +231,8 @@ world-settings:
       MinimumTicks: 100
       MaximumTicks: 600
     despawn-ranges:
-      soft: 30
-      hard: 72
+      soft: 45
+      hard: 85
     lootables:
       auto-replenish: false
       restrict-player-reloot: true
@@ -256,6 +260,7 @@ world-settings:
       spawn-chance-min: 25
       spawn-chance-max: 75
     entity-per-chunk-save-limit:
+      small_fireball: -1
       experience_orb: 16
       arrow: 16
       dragonfireball: 3
@@ -294,3 +299,16 @@ world-settings:
       ambient: -1
     generator-settings:
       flat-bedrock: false
+    mob-effects:
+      undead-immune-to-certain-effects: true
+      spiders-immune-to-poison-effect: true
+      immune-to-wither-effect:
+        wither: true
+        wither-skeleton: true
+    tick-rates:
+      sensor:
+        villager:
+          secondarypoisensor: 40
+      behavior:
+        villager:
+          validatenearbypoi: -1

@@ -25,10 +25,10 @@ settings:
   minimum-api: none
   world-container: worlds
 spawn-limits:
-  monsters: 70
+  monsters: 10
   animals: 10
-  water-animals: 5
-  water-ambient: 20
+  water-animals: 2
+  water-ambient: 2
   ambient: 15
 chunk-gc:
   period-in-ticks: 600
